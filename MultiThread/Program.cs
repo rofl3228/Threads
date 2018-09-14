@@ -12,7 +12,7 @@ namespace MultiThread
         {
             //Entry point
             TaskManager taskManager = new TaskManager();
-            
+            Console.WriteLine("F*CK JAVA");
             Console.ReadKey();
         }
     }
