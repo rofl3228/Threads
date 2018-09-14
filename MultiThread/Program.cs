@@ -10,7 +10,10 @@ namespace MultiThread
     {
         static void Main(string[] args)
         {
-            
+            //Entry point
+            TaskManager taskManager = new TaskManager();
+            //taskManager.activate();//создает сокеты и кучу для заданий. Тут открывается окно для ввода заданий и мониторинга
+            Console.ReadKey();
         }
     }
 }
