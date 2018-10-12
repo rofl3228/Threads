@@ -11,8 +11,8 @@ namespace MultiThread
         static void Main(string[] args)
         {
             //Entry point
-            TaskManager taskManager = new TaskManager();
-            Console.WriteLine("BYE");
+            Space_3D A = new Space_3D();
+
             Console.ReadKey();
         }
     }

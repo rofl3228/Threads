@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MultiThread
 {
-    class Task
+    //Двумерная реализация задачи
+    class Space_2D : Space
     {
-        protected string task { set; get; }
-
+        
     }
 }
