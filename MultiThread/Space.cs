@@ -10,6 +10,6 @@ namespace MultiThread
     abstract public class Space
     {
         public int size { get; set; }
-        public float dencity { get; set; }
+        public float Density { get; set; }
     }
 }
