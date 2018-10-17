@@ -19,6 +19,8 @@ namespace MultiThread
             TimeSpan timeSpan = sw.Elapsed;
             Console.WriteLine(timeSpan);
             Console.ReadKey();
+            A._d_print();
+            Console.ReadKey();
         }
     }
 }
