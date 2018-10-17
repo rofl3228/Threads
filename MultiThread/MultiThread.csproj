@@ -62,7 +62,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Space.cs" />
     <Compile Include="Space_2D.cs" />
+    <Compile Include="Space_2D.Dot_2D.cs" />
     <Compile Include="Space_3D.cs" />
+    <Compile Include="Space_3D.Dot_3D.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
