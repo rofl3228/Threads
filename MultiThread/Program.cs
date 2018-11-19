@@ -7,19 +7,27 @@ using System.Diagnostics;
 
 namespace MultiThread
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             //Entry point
-            Stopwatch sw = new Stopwatch();
-            sw.Start();
-            Space_3D A = new Space_3D(1000, 2);
-            sw.Stop();
-            TimeSpan timeSpan = sw.Elapsed;
-            Console.WriteLine(timeSpan);
-            Console.ReadKey();
-            A._d_print();
+            //Stopwatch sw = new Stopwatch();
+            //sw.Start();
+            //Space2D space2D = new Space2D(200, 2);
+            //space2D.Print();
+            //sw.Stop();
+            //TimeSpan timeSpan = sw.Elapsed;
+            //Console.WriteLine(timeSpan);
+            //Console.ReadKey();
+            //Stopwatch stopwatch = new Stopwatch();
+            //stopwatch.Start();
+            //Space3D space3D = new Space3D(500, 2);
+            //space3D.Print();
+            //stopwatch.Stop();
+            //Console.WriteLine(stopwatch.Elapsed);
+            //Console.ReadKey();
+            
             Console.ReadKey();
         }
     }

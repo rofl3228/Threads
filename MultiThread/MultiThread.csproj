@@ -58,13 +58,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Point.cs" />
+    <Compile Include="Point2D.cs" />
+    <Compile Include="Point3D.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Space.cs" />
-    <Compile Include="Space_2D.cs" />
-    <Compile Include="Space_2D.Dot_2D.cs" />
-    <Compile Include="Space_3D.cs" />
-    <Compile Include="Space_3D.Dot_3D.cs" />
+    <Compile Include="Space2D.cs" />
+    <Compile Include="Space3D.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
