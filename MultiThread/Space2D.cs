@@ -72,7 +72,12 @@ namespace MultiThread
         {
             List<List<Point2D>> clasters = new List<List<Point2D>>();
             List<Point2D> Source = Collection.Select(p => p.Clone()).ToList();//копия списка точек
-
+            List<Point2D> Clast = new List<Point2D>();
+            Clast.Add(Source[0]);
+            while (Source.Count > 0)
+            {
+                
+            }
             return clasters;
         }
 
@@ -88,7 +93,18 @@ namespace MultiThread
                     }
                 }
             }
+            return false;
+        }
 
+        private bool IsNear(List<Point2D> list, Point2D point, float range)
+        {
+            foreach(var elem in list)
+            {
+                if (elem.Distance(point) < range)
+                {
+                    return true;
+                }
+            }
             return false;
         }
     }

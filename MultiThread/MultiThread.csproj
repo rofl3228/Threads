@@ -58,6 +58,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FThread.cs" />
+    <Compile Include="FThreadPool.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Point2D.cs" />
     <Compile Include="Point3D.cs" />

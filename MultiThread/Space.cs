@@ -13,6 +13,7 @@ namespace MultiThread
         protected float Resolutin { get; set; }
         protected float Density { get; set; }
         protected const int NUM_OF_THREADS = 4;
+        protected const float CLAST_RADIUS = 25f;
 
         protected readonly Random random = new Random();
 

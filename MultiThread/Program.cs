@@ -27,7 +27,12 @@ namespace MultiThread
             //stopwatch.Stop();
             //Console.WriteLine(stopwatch.Elapsed);
             //Console.ReadKey();
-            
+
+            Space3D space3D = new Space3D(100, 2);
+            //space3D.Print();
+            Console.WriteLine();
+            space3D.ClasterPrint();
+
             Console.ReadKey();
         }
     }

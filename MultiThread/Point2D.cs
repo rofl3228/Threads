@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MultiThread
 {
-    internal class Point2D : Point, ICloneable
+    internal class Point2D : Point
     {
         public Point2D(Random random, float range)
         {
@@ -34,8 +34,11 @@ namespace MultiThread
 
         public void Print() => Console.WriteLine($"{X:f5}  |  {Y:f5}");
 
-        public Point2D Clone() => new Point2D(X, Y);
-
         public float Distance(Point2D another) => (float)Math.Sqrt(Math.Pow((X - another.X), 2) + Math.Pow((Y - another.Y), 2));
+
+        public Point2D Clone()
+        {
+            return new Point2D(X, Y);
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MultiThread
 {
-    internal class Point3D : Point, ICloneable
+    internal class Point3D : Point
     {
         protected float Z { get; set; }
 
@@ -40,8 +40,8 @@ namespace MultiThread
 
         public void Print() => Console.WriteLine($"{X:f5}  |  {Y:f5}  |  {Z:f5}");
 
-        public Point3D Clone() => new Point3D(X, Y, Z);
-
         public float Distance(Point3D another) => (float)Math.Sqrt(Math.Pow((X - another.X), 2) + Math.Pow((Y - another.Y), 2) + Math.Pow((Z - another.Z), 2));
+
+        public Point3D Clone() => new Point3D(X, Y, Z);
     }
 }
