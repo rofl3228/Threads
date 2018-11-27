@@ -10,6 +10,8 @@ namespace MultiThread
     internal class Space3D : Space
     {
         private List<Point3D> Collection;
+        private List<List<Point3D>> Clasters;
+
 
         public Space3D()
         {
@@ -17,6 +19,7 @@ namespace MultiThread
             Resolutin = 100f;
 
             Collection = Generate(Resolutin, Density);
+            Clasters = GetClasters();
         }
 
         public Space3D(float res, float den)
@@ -25,6 +28,7 @@ namespace MultiThread
             Density = den;
 
             Collection = Generate(Resolutin, Density);
+            Clasters = GetClasters();
         }
 
         public void Print()
@@ -82,25 +86,40 @@ namespace MultiThread
                         points.Add(Source[0]);
                         Source.RemoveAt(0);
                     }
-                    List<int> ToRemove = new List<int>();
+                    
                     for (int i = 0; i < Source.Count; i++)
                     {
                         Point3D elem = Source[i];
                         if (IsNear(elem, points, CLAST_RADIUS))
                         {
                             points.Add(elem);
-                            ToRemove.Add(i);
                         }
                     }
-                    foreach(int index in ToRemove)
+
+                    foreach(var elem in points)
                     {
-                        Source.RemoveAt(index);
+                        Source.Remove(elem);
                     }
                 }
                 while (IsNear(Source, points, CLAST_RADIUS));
                 clasters.Add(points);
             }
             return clasters;
+        }
+
+        public int NumOfClast()
+        {
+            return Clasters.Count;
+        }
+
+        public int NumOfElem()
+        {
+            int res = 0;
+            foreach(List<Point3D> cl in Clasters)
+            {
+                res += cl.Count;
+            }
+            return res;
         }
 
         public void ClasterPrint()
@@ -112,8 +131,10 @@ namespace MultiThread
                 {
                     elem.Print();
                 }
+                Point3D[] arr = clast.ToArray();
                 Console.WriteLine();
             }
+
         }
 
         static bool IsNear(List<Point3D> first, List<Point3D> second, float radius)//сравнивает два списка и возвращает true если есть есть точки на расстоянии меньше radius

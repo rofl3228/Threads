@@ -11,28 +11,15 @@ namespace MultiThread
     {
         private static void Main(string[] args)
         {
-            //Entry point
-            //Stopwatch sw = new Stopwatch();
-            //sw.Start();
-            //Space2D space2D = new Space2D(200, 2);
-            //space2D.Print();
-            //sw.Stop();
-            //TimeSpan timeSpan = sw.Elapsed;
-            //Console.WriteLine(timeSpan);
-            //Console.ReadKey();
-            //Stopwatch stopwatch = new Stopwatch();
-            //stopwatch.Start();
-            //Space3D space3D = new Space3D(500, 2);
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            Space3D space3D = new Space3D(400, 4);
             //space3D.Print();
-            //stopwatch.Stop();
-            //Console.WriteLine(stopwatch.Elapsed);
-            //Console.ReadKey();
-
-            Space3D space3D = new Space3D(100, 2);
-            //space3D.Print();
-            Console.WriteLine();
-            space3D.ClasterPrint();
-
+            stopwatch.Stop();
+            //space3D.ClasterPrint();
+            Console.WriteLine(space3D.NumOfClast());
+            Console.WriteLine(space3D.NumOfElem());
+            Console.WriteLine(stopwatch.Elapsed);
             Console.ReadKey();
         }
     }
